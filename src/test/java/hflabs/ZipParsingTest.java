@@ -1,4 +1,4 @@
-package model;
+package hflabs;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
@@ -63,6 +63,7 @@ public class ZipParsingTest {
                     Assertions.assertEquals(8, list.size());
                 };
                 break;
+
             }
         }
     }

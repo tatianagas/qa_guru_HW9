@@ -1,8 +1,9 @@
-package model;
+package hflabs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import hflabs.model.Book;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.awt.print.Book;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -20,11 +21,13 @@ public class JsonParsingTest {
             try (InputStreamReader isr = new InputStreamReader(is)) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 Book book = objectMapper.readValue(isr, Book.class);
-                assertEquals("Война и мир", book.setPage());
+                assertEquals("Война и мир", book.getTitle());
                 assertEquals(1869, book.getPublishedYear());
                 assertEquals("Роман", book.getGenre());
                 assertEquals(1225, book.getPages());
-
+                assertEquals("Лев Толстой", book.getAuthor().get(0).getName());
+                assertEquals("Русский", book.getAuthor().get(0).getNationality());
+                assertEquals("Лев Толстой", book.getAuthor().get(0).getName());
             }
 
         }
