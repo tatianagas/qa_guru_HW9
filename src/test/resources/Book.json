@@ -1,0 +1,16 @@
+{
+  "title": "Война и мир",
+  "author": [
+    {
+      "name": "Лев Толстой",
+      "birthYear": 1828,
+      "nationality": "Русский"
+    }
+  ],
+  "publishedYear": 1869,
+  "genre": "Роман",
+  "pages": 1225,
+  "language": "Русский",
+  "availableCopies": 5,
+  "libraryLocation": "Главный зал"
+}
